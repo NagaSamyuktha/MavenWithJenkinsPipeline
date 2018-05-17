@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+               nohup sh 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+               nohup sh 'mvn test'
             }
         }
     }
